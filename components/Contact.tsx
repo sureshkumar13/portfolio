@@ -1,6 +1,14 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import { IconMail, IconBrandLinkedin, IconBrandGithub, IconDownload, IconMapPin, IconBriefcase, IconPhone, IconExternalLink } from "@tabler/icons-react";
+import {
+  IconMail,
+  IconBrandLinkedin,
+  IconDownload,
+  IconMapPin,
+  IconBriefcase,
+  IconPhone,
+  IconExternalLink,
+} from "@tabler/icons-react";
 
 export function Contact() {
   const ref = useRef(null);
@@ -54,10 +62,7 @@ export function Contact() {
       className="min-h-screen flex items-center justify-center px-6 py-32"
       id="contact"
     >
-      <motion.div 
-        className="max-w-5xl w-full"
-        style={{ opacity, y }}
-      >
+      <motion.div className="max-w-5xl w-full" style={{ opacity, y }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,8 +72,8 @@ export function Contact() {
         >
           <motion.h2
             className="mb-4"
-            style={{ 
-              fontSize: "clamp(2.5rem, 5vw, 4rem)", 
+            style={{
+              fontSize: "clamp(2.5rem, 5vw, 4rem)",
               fontWeight: 800,
               background: "linear-gradient(135deg, #6366F1, #22D3EE)",
               WebkitBackgroundClip: "text",
@@ -130,13 +135,13 @@ export function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + index * 0.1 }}
-                  whileHover={{ 
-                    x: 8, 
+                  whileHover={{
+                    x: 8,
                     scale: 1.02,
                     boxShadow: `0 15px 40px ${item.color}20`,
                   }}
-                  style={{ 
-                    display: "flex", 
+                  style={{
+                    display: "flex",
                     textDecoration: "none",
                     border: `1px solid ${item.color}30`,
                   }}
@@ -153,10 +158,22 @@ export function Contact() {
                     <item.icon size={22} color="#F1F5F9" stroke={2} />
                   </motion.div>
                   <div>
-                    <p style={{ fontSize: "0.813rem", color: "#94a3b8", marginBottom: "2px" }}>
+                    <p
+                      style={{
+                        fontSize: "0.813rem",
+                        color: "#94a3b8",
+                        marginBottom: "2px",
+                      }}
+                    >
                       {item.label}
                     </p>
-                    <p style={{ fontSize: "1rem", fontWeight: 600, color: "#F1F5F9" }}>
+                    <p
+                      style={{
+                        fontSize: "1rem",
+                        fontWeight: 600,
+                        color: "#F1F5F9",
+                      }}
+                    >
                       {item.value}
                     </p>
                   </div>
@@ -188,13 +205,13 @@ export function Contact() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 + index * 0.1 }}
-                    whileHover={{ 
-                      x: 8, 
+                    whileHover={{
+                      x: 8,
                       scale: 1.02,
                       boxShadow: `0 15px 40px ${link.color}20`,
                     }}
-                    style={{ 
-                      display: "flex", 
+                    style={{
+                      display: "flex",
                       textDecoration: "none",
                       border: `1px solid ${link.color}30`,
                     }}
@@ -212,7 +229,13 @@ export function Contact() {
                         <link.icon size={22} color="#F1F5F9" stroke={2} />
                       </motion.div>
                       <div>
-                        <p style={{ fontSize: "1rem", fontWeight: 600, color: "#F1F5F9" }}>
+                        <p
+                          style={{
+                            fontSize: "1rem",
+                            fontWeight: 600,
+                            color: "#F1F5F9",
+                          }}
+                        >
                           {link.label}
                         </p>
                         <p style={{ fontSize: "0.813rem", color: "#94a3b8" }}>
@@ -241,7 +264,7 @@ export function Contact() {
             className="space-y-6"
           >
             {/* Availability Status */}
-            <motion.div 
+            <motion.div
               className="glass rounded-3xl p-8 relative overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -256,12 +279,13 @@ export function Contact() {
               <motion.div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100"
                 style={{
-                  background: "radial-gradient(circle at center, rgba(34, 211, 238, 0.15), transparent)",
+                  background:
+                    "radial-gradient(circle at center, rgba(34, 211, 238, 0.15), transparent)",
                 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               />
-              
+
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
@@ -277,11 +301,17 @@ export function Contact() {
                       ease: "easeInOut",
                     }}
                   />
-                  <span style={{ fontSize: "0.938rem", color: "#22D3EE", fontWeight: 600 }}>
+                  <span
+                    style={{
+                      fontSize: "0.938rem",
+                      color: "#22D3EE",
+                      fontWeight: 600,
+                    }}
+                  >
                     Available for Opportunities
                   </span>
                 </div>
-                
+
                 <h3
                   style={{
                     fontSize: "1.5rem",
@@ -292,31 +322,49 @@ export function Contact() {
                 >
                   Open to New Roles
                 </h3>
-                
-                <p style={{ fontSize: "0.938rem", color: "#cbd5e1", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-                  Currently seeking <span style={{ color: "#22D3EE", fontWeight: 600 }}>Senior Frontend Developer</span> or <span style={{ color: "#6366F1", fontWeight: 600 }}>React Engineer</span> positions where I can contribute my 5+ years of expertise in building scalable, high-performance web applications.
+
+                <p
+                  style={{
+                    fontSize: "0.938rem",
+                    color: "#cbd5e1",
+                    lineHeight: 1.8,
+                    marginBottom: "1.5rem",
+                  }}
+                >
+                  Currently seeking{" "}
+                  <span style={{ color: "#22D3EE", fontWeight: 600 }}>
+                    Senior Frontend Developer
+                  </span>{" "}
+                  or{" "}
+                  <span style={{ color: "#6366F1", fontWeight: 600 }}>
+                    React Engineer
+                  </span>{" "}
+                  positions where I can contribute my 5+ years of expertise in
+                  building scalable, high-performance web applications.
                 </p>
 
                 <div className="flex flex-wrap gap-3">
-                  {["Full-time", "Remote / Hybrid", "Immediate Joiner"].map((tag, i) => (
-                    <motion.span
-                      key={i}
-                      className="px-4 py-2 rounded-full text-sm"
-                      style={{
-                        background: "rgba(34, 211, 238, 0.1)",
-                        border: "1px solid rgba(34, 211, 238, 0.3)",
-                        color: "#22D3EE",
-                        fontWeight: 500,
-                      }}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.5 + i * 0.1 }}
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      {tag}
-                    </motion.span>
-                  ))}
+                  {["Full-time", "Remote / Hybrid", "Immediate Joiner"].map(
+                    (tag, i) => (
+                      <motion.span
+                        key={i}
+                        className="px-4 py-2 rounded-full text-sm"
+                        style={{
+                          background: "rgba(34, 211, 238, 0.1)",
+                          border: "1px solid rgba(34, 211, 238, 0.3)",
+                          color: "#22D3EE",
+                          fontWeight: 500,
+                        }}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.5 + i * 0.1 }}
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        {tag}
+                      </motion.span>
+                    )
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -331,7 +379,7 @@ export function Contact() {
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              style={{ 
+              style={{
                 textDecoration: "none",
                 border: "1px solid rgba(99, 102, 241, 0.3)",
               }}
@@ -339,10 +387,11 @@ export function Contact() {
               <motion.div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                 style={{
-                  background: "radial-gradient(circle at center, rgba(99, 102, 241, 0.2), transparent)",
+                  background:
+                    "radial-gradient(circle at center, rgba(99, 102, 241, 0.2), transparent)",
                 }}
               />
-              
+
               <div className="relative z-10 flex items-center justify-between">
                 <div>
                   <h3
@@ -374,7 +423,7 @@ export function Contact() {
             </motion.a>
 
             {/* Current Role Info */}
-            <motion.div 
+            <motion.div
               className="glass rounded-3xl p-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -407,8 +456,16 @@ export function Contact() {
                   >
                     Currently at OpenText
                   </h3>
-                  <p style={{ fontSize: "0.938rem", color: "#94a3b8", lineHeight: 1.7 }}>
-                    Software Engineer II, working on enterprise frontend solutions with React and TypeScript. Looking for new challenges and growth opportunities.
+                  <p
+                    style={{
+                      fontSize: "0.938rem",
+                      color: "#94a3b8",
+                      lineHeight: 1.7,
+                    }}
+                  >
+                    Software Engineer II, working on enterprise frontend
+                    solutions with React and TypeScript. Looking for new
+                    challenges and growth opportunities.
                   </p>
                 </div>
               </div>

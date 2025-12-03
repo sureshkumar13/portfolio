@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { IconBrandLinkedin, IconBrandGithub, IconMail, IconHeart } from "@tabler/icons-react";
+import { IconBrandLinkedin, IconMail, IconHeart } from "@tabler/icons-react";
 
 export function Footer() {
   const socialLinks = [

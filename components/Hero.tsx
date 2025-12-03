@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform, useSpring, useMotionValue, useVelocity, useAnimationFrame } from "motion/react";
+import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import { IconChevronDown, IconSparkles, IconCode, IconBolt, IconBrandReact, IconBrandTypescript, IconStars, IconFileDownload, IconBriefcase } from "@tabler/icons-react";
 import { useState, useEffect, useRef } from "react";
 
@@ -26,7 +26,6 @@ export function Hero() {
   const opacity = useTransform(smoothProgress, [0, 0.5], [1, 0]);
   const scale = useTransform(smoothProgress, [0, 0.5], [1, 0.85]);
   const y = useTransform(smoothProgress, [0, 0.5], [0, 150]);
-  const blur = useTransform(smoothProgress, [0, 0.5], [0, 10]);
 
   // Typing animation effect
   useEffect(() => {
