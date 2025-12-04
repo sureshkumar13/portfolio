@@ -83,7 +83,7 @@ export function Navigation() {
             </motion.a>
           ))}
           <motion.a
-            href="/assets/Resume.pdf"
+            href={`${import.meta.env.BASE_URL}/assets/Resume.pdf`}
             download="Suresh_Kumar_S_Resume.pdf"
             className="px-6 py-2 rounded-lg flex items-center gap-2"
             style={{
